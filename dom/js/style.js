@@ -1,0 +1,15 @@
+new Vue({
+    el: '#app',
+    data (){
+        return{
+            aplicarC1: false,
+            aplicarC2: false,
+            classeCSS: '',
+        }
+    },
+    computed: {
+        estilo1() {
+            return {c1: this.aplicarC1}
+        }
+    }
+})

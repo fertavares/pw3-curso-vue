@@ -11,7 +11,7 @@
 
     <div id="app">
         <h2>Início</h2>
-        {{ nomeCompleto() }}
+        {{ nomeCompleto }}
 
         <a @click.prevent="foiProGoogle" :href="link">Ir para o Google</a>
         <p v-html="linkHtml"></p>
@@ -21,16 +21,22 @@
         <p>{{ pais }}</p>
 
         <h2>Contador</h2>
-        <p>{{contador}}</p>
+        <p>{{contador}} | {{contador2}}</p>
         <button @click="somar(5, $event)">+5</button>
-
-        {{ contador > 49 ? "Maior que 49" : "Menor que 49" }}
+        <button @click="contador2++">+1</button>
+        {{ verificadorDoContador }}
 
         <p @mousemove="atualizarPosicaoMouse">Mouse: {{x}} x {{y}}
             <span @mousemove.stop="">PARAR AQUI!!</span>
         </p>
 
         Modificador Keyup: <input type="text" @keyup.enter.alt="exibirAlerta" />
+        <hr>
+
+        <h3>Two-way data bind</h3>
+        <p>{{titulo}}</p>
+        <!-- <input type="text" :value="titulo" @change="(event) => titulo = event.target.value"/> -->
+        <input type="text" v-model="titulo">
     </div>
 
     <script src="js/script.js"></script>

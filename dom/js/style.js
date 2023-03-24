@@ -5,6 +5,7 @@ new Vue({
             aplicarC1: false,
             aplicarC2: false,
             classeCSS: '',
+            corEscolhida: ''
         }
     },
     computed: {

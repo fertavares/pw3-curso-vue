@@ -13,8 +13,8 @@
     <div id="app">
         <div class="caixas">
             <div class="box" :class="estilo1" @click="aplicarC1 = !aplicarC1"></div>
-            <div class="box" :class="{'cor-2' : aplicarC2}" @click="aplicarC2 = !aplicarC2"></div>
-            <div class="box" :class="classeCSS"></div>
+            <div class="box" :style="{backgroundColor: corEscolhida}"></div>
+            <div :class="['box', classeCSS]"></div>
         </div>
         
         <select v-model="classeCSS">
@@ -22,9 +22,7 @@
             <option value="cor-2">Amarelo</option>
             <option value="c3">Verde</option>
         </select>
-    </div>
-    
-
+        <input type="text" v-model="corEscolhida">
     </div>
 
     <script src="js/style.js"></script>

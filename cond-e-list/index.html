@@ -36,15 +36,26 @@
 
         <ul>
         <li>
-            <template v-for="(cor, index) in cores">
-                <h2>{{cor}}</h2>
-                <p>{{index + 1}}</p>
-            </template>
+            <li :key="index" v-for="(cor, index) in cores">{{index}} - {{cor}}</li>
         </li>
         </ul>
 
+        <input type="text" @keyup.enter="cores.push($event.target.value)">Adicionar </input>
+
         <ul>
-            
+            <li v-for="pessoa in pessoas">
+                <template v-for="(valor, chave, indice) in pessoa">
+                    {{chave}} = {{valor}}
+                </template>
+            </li>
+        </ul>
+
+        <ul>
+            <li :key="numero" v-for="numero in 10 ">{{numero}}</li>
+        </ul>
+
+        <ul>
+            <li :key="index" v-for="palavra in 'Pensar' ">{{palavra}}</li>
         </ul>
     </main>
 

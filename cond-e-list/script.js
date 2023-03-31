@@ -5,7 +5,19 @@ new Vue({
             nome: 'Odnanref',
             logado: false,
             anonimo: false, 
-            cores: ['Vermelho', 'Verde', 'Amarelo', 'Azul', 'Preto']
+            cores: ['Vermelho', 'Verde', 'Amarelo', 'Azul', 'Preto'],
+            pessoas: [
+                {
+                    nome: 'Ana',
+                    idade: 26,
+                    peso: 59
+                },
+                {
+                    nome: 'Guilherme',
+                    idade: 22,
+                    peso: 89
+                },
+            ]
         }
     }
 });
